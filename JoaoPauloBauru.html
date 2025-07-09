@@ -487,7 +487,7 @@
             }
 
             const funcionalidades = [
-                // Módulo 1: Estrutura e Acessos
+                // Módulo 1: Estrutura e Acessos (Core)
                 { funcionalidade: 'Estruturação do Banco de Dados', descricao: 'Criação das tabelas de usuários, logs, campanhas e agendamentos no Bubble.io.', modulo: 'Base', horasBubble: 10, horasN8N: 10 },
                 { funcionalidade: 'Design System e UI Kit', descricao: 'Definição da paleta de cores, tipografia e componentes visuais padrão da plataforma.', modulo: 'Base', horasBubble: 15, horasN8N: 15 },
                 { funcionalidade: 'Tela de Login para Administradores', descricao: 'Desenvolvimento da interface de login (UI) para acesso ao painel de gestão.', modulo: 'Base', horasBubble: 5, horasN8N: 5 },
@@ -501,28 +501,28 @@
                 { funcionalidade: 'Configuração do Gateway de WhatsApp', descricao: 'Autenticação e configuração da API Oficial do WhatsApp na plataforma.', modulo: 'Integração', horasBubble: 15, horasN8N: 15 },
                 { funcionalidade: 'Gestão de Templates de Mensagens', descricao: 'Criação e submissão para aprovação dos modelos de mensagens (reunião, rematrícula, cobrança).', modulo: 'Integração', horasBubble: 15, horasN8N: 15 },
 
-                // Módulo 3: Painel Administrativo
+                // Módulo 3: Painel Administrativo (Core)
                 { funcionalidade: 'UI: Gestão de Campanhas', descricao: 'Interface para criar/editar campanhas de rematrícula, definindo datas de início e fim.', modulo: 'Admin', horasBubble: 15, horasN8N: 15 },
                 { funcionalidade: 'UI: Calendário de Reuniões', descricao: 'Interface visual para a secretaria definir e visualizar os horários disponíveis por turma.', modulo: 'Admin', horasBubble: 20, horasN8N: 20 },
                 { funcionalidade: 'UI: Dashboard de Métricas', descricao: 'Desenvolvimento dos elementos visuais do painel (gráficos, contadores, tabelas).', modulo: 'Admin', horasBubble: 15, horasN8N: 15 },
                 { funcionalidade: 'Lógica de Exibição de Dados no Dashboard', descricao: 'Workflows para alimentar o dashboard com dados de rematrículas e agendamentos.', modulo: 'Admin', horasBubble: 15, horasN8N: 15 },
 
-                // Módulo 4: Interface dos Pais
+                // Módulo 4: Interface dos Pais (Core)
                 { funcionalidade: 'Desenvolvimento da Página de Agendamento', descricao: 'Criação da página web responsiva onde os pais realizarão o agendamento.', modulo: 'Pais', horasBubble: 20, horasN8N: 20 },
                 { funcionalidade: 'Lógica de Exibição de Horários', descricao: 'Workflow para buscar e exibir apenas os horários de reunião que ainda estão disponíveis.', modulo: 'Pais', horasBubble: 15, horasN8N: 15 },
                 { funcionalidade: 'Workflow de Confirmação de Agendamento', descricao: 'Lógica para salvar o horário escolhido pelo pai e marcá-lo como indisponível.', modulo: 'Pais', horasBubble: 15, horasN8N: 15 },
                 
                 // Módulo 5: Automação (Bubble.io)
-                { funcionalidade: 'WF (Bubble): Envio de Convites de Reunião', descricao: 'Rotina que lê as turmas e envia o link de agendamento para os pais.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
-                { funcionalidade: 'WF (Bubble): Confirmação e Lembretes de Reunião', descricao: 'Rotina que envia a confirmação do agendamento e um lembrete 24h antes.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
-                { funcionalidade: 'WF (Bubble): Lógica de Reagendamento', descricao: 'Rotina que libera o horário antigo e permite ao pai escolher um novo.', modulo: 'Automação Nativa', horasBubble: 25, horasN8N: 0 },
+                { funcionalidade: 'WF (Bubble): Envio de Convites de Reunião', descricao: 'Rotina que lê as turmas e envia o link de agendamento para os pais.', modulo: 'Automação Nativa', horasBubble: 35, horasN8N: 0 },
+                { funcionalidade: 'WF (Bubble): Confirmação e Lembretes de Reunião', descricao: 'Rotina que envia a confirmação do agendamento e um lembrete 24h antes.', modulo: 'Automação Nativa', horasBubble: 35, horasN8N: 0 },
+                { funcionalidade: 'WF (Bubble): Lógica de Reagendamento', descricao: 'Rotina que libera o horário antigo e permite ao pai escolher um novo.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
                 { funcionalidade: 'WF (Bubble): Disparo Inicial de Rematrícula', descricao: 'Rotina agendada para enviar a campanha de rematrícula na data configurada.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
                 { funcionalidade: 'WF (Bubble): Lembretes de Rematrícula', descricao: 'Rotina recorrente que consulta o ERP e envia lembretes para pendentes.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
                 { funcionalidade: 'WF (Bubble): Notificação de Inadimplentes', descricao: 'Rotina recorrente que consulta o ERP e envia cobranças para pendentes.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
 
                 // Módulo 6: Automação (N8N)
                 { funcionalidade: 'Infraestrutura e Setup do N8N', descricao: 'Instalação, configuração e securitização do servidor N8N para a aplicação.', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 40 },
-                { funcionalidade: 'WF (N8N): Orquestração de Reuniões', descricao: 'Workflow completo para convite, confirmação, lembrete e reagendamento interativo.', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 70 },
+                { funcionalidade: 'WF (N8N): Orquestração de Reuniões', descricao: 'Workflow completo para convite, confirmação, lembrete e reagendamento interativo.', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 85 },
                 { funcionalidade: 'WF (N8N): Campanha de Rematrícula', descricao: 'Workflow com múltiplas etapas para disparo inicial e lembretes (15, 7, 3 dias).', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 70 },
                 { funcionalidade: 'WF (N8N): Régua de Cobrança', descricao: 'Workflow com lógica escalonada para notificar inadimplentes (lembrete, aviso).', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 70 },
                 { funcionalidade: 'API de Conexão Bubble <> N8N', descricao: 'Desenvolvimento dos endpoints de API no Bubble para acionar os workflows do N8N.', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 50 }
@@ -532,7 +532,6 @@
             if (tabelaCorpo) {
                 let totalHorasBubble = 0;
                 let totalHorasN8N = 0;
-                const coreHours = 250; // Horas comuns a ambos os projetos
 
                 funcionalidades.forEach(item => {
                     const row = tabelaCorpo.insertRow();
@@ -550,7 +549,11 @@
                     horasN8NCell.style.textAlign = 'center';
 
                     totalHorasBubble += item.horasBubble;
-                    totalHorasN8N += item.horasN8N;
+                    if (item.horasN8N > 0 && item.horasBubble > 0) { // Core tasks
+                        totalHorasN8N += item.horasN8N;
+                    } else if (item.horasN8N > 0) { // N8N-specific tasks
+                        totalHorasN8N += item.horasN8N;
+                    }
                 });
                 
                 // Add Total Row
@@ -568,7 +571,7 @@
                 totalHorasBubbleCell.style.textAlign = 'center';
 
                 const totalHorasN8NCell = totalRow.insertCell();
-                totalHorasN8NCell.textContent = (coreHours + totalHorasN8N) + 'h';
+                totalHorasN8NCell.textContent = totalHorasN8N + 'h';
                 totalHorasN8NCell.style.textAlign = 'center';
             }
         });
