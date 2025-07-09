@@ -2,8 +2,16 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proposta Comercial - Rhizoma para Projeto Escola Fourc</title>
+    
+    <!-- Meta Tags para Preview em Redes Sociais (WhatsApp, Facebook, etc.) -->
+    <meta property="og:title" content="Proposta Comercial - Rhizoma para Escola Fourc" />
+    <meta property="og:description" content="Desenvolvimento de Plataforma de Comunicação e Gestão Escolar em Bubble.io." />
+    <meta property="og:image" content="https://19842abecef313a41bd8419d758f5c95.cdn.bubble.io/f1741049920492x827560874996382700/Sem%20T%C3%ADtulo-2-min.png" />
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <style>
         :root {
@@ -41,6 +49,7 @@
             padding-bottom: 20px;
             border-bottom: 1px solid var(--cor-apoio-lavanda);
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
         .logo {
             display: flex;
@@ -211,13 +220,6 @@
         ul.payment-terms li {
             margin-bottom: 5px;
         }
-        .payment-option-box {
-            margin-top: 12px;
-            padding: 10px;
-            background-color: #fdfcff;
-            border: 1px dashed var(--cor-borda);
-            border-radius: 6px;
-        }
         .appendix-note {
             font-style: italic;
             color: var(--cor-texto-secundario);
@@ -226,6 +228,10 @@
             background-color: #f9f8fe;
             border-left: 2px solid var(--cor-secundaria-roxo);
             font-size: 0.9em;
+        }
+        #functionalities-appendix-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* Garante rolagem suave no iOS */
         }
         footer {
             text-align: center;
@@ -238,6 +244,37 @@
         footer p {
             margin: 2px 0;
         }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .logo {
+                margin-bottom: 15px;
+            }
+            .header-details {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            .logo-text h1 {
+                font-size: 2em;
+            }
+            .header-details h2 {
+                font-size: 1.4em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -245,7 +282,7 @@
         <header>
             <div class="logo">
                 <img
-                    src="https://19842abecef313a41bd8419d758f5c95.cdn.bubble.io/f1741049920492x827560874996382700/Sem%20T%C3%ADtulo-2-min.png?_gl=1*y4ctui*_gcl_au*NjE4ODgxODc2LjE3NDg1NTgxMjc.*_ga*MjEwMDA1MTQzOC4xNzQ2NTU5MjA5*_ga_BFPVR2DEE2*czE3NDg2MDQzOTgkbzE3JGcxJHQxNzQ4NjQzMzQ1JGo0NyRsMCRoMA.."
+                    src="https://19842abecef313a41bd8419d758f5c95.cdn.bubble.io/f1741049920492x827560874996382700/Sem%20T%C3%ADtulo-2-min.png"
                     alt="Logotipo Rhizoma"
                     id="companyLogo"
                 />
@@ -274,9 +311,9 @@
             <ul>
                 <li><strong>Solução:</strong> Webapp customizado em Bubble.io integrado ao ERP da escola para automação de comunicação e processos via WhatsApp.</li>
                 <li><strong>Objetivo:</strong> Automatizar o agendamento de reuniões, a gestão de rematrículas e as notificações de cobrança, fortalecendo o relacionamento com os pais e reduzindo a carga de trabalho administrativo.</li>
-                <li><strong>Diferencial:</strong> Leitura direta do banco de dados SQL para ações proativas e em tempo real, com ou sem o uso de um agente de automação N8N.</li>
-                <li><strong>Investimento:</strong> A partir de R$ 20.750,00.</li>
-                <li><strong>Prazo Estimado:</strong> Entre 10 e 14 semanas, a depender do escopo.</li>
+                <li><strong>Diferencial:</strong> Leitura direta do banco de dados SQL para ações proativas e em tempo real, com a opção de automação via N8N para workflows avançados.</li>
+                <li><strong>Investimento:</strong> A partir de R$ 21.250,00.</li>
+                <li><strong>Prazo Estimado:</strong> Entre 12 e 15 semanas, a depender do escopo.</li>
             </ul>
         </section>
 
@@ -305,25 +342,26 @@
 
         <section id="key-modules-benefits">
             <h3>Módulos e Sub-Entregas</h3>
+            <p>Ambos os escopos serão desenvolvidos na plataforma Bubble.io. A diferença reside na ferramenta utilizada para as automações (workflows), que pode ser o próprio Bubble.io ou a ferramenta especialista N8N, que oferece maior flexibilidade para lógicas complexas.</p>
             <h4 class="module-title">1. Conexão e Leitura do Banco de Dados (SQL)</h4>
             <p>
-                Estabelecimento de uma conexão segura e somente leitura entre a plataforma Bubble.io e o banco de dados SQL do ERP da escola. <strong>Benefício:</strong> Garante que todas as ações (agendamentos, rematrículas, cobranças) sejam baseadas em informações precisas e em tempo real.
+                Estabelecimento de uma conexão segura e somente leitura entre a plataforma Bubble.io e o banco de dados SQL do ERP da escola. <strong>Benefício:</strong> Garante que todas as ações sejam baseadas em informações precisas e em tempo real.
             </p>
             <h4 class="module-title">2. Agendamento de Reuniões via WhatsApp</h4>
             <p>
-                A secretaria define os horários disponíveis para cada turma. Os pais recebem um link via WhatsApp para escolher o melhor horário. A agenda é confirmada e os outros pais veem apenas os horários ainda livres. Permite reagendamento pelo mesmo canal. <strong>Benefício:</strong> Elimina a troca de e-mails e telefonemas para agendamento, dando autonomia aos pais e controle à escola.
+                A secretaria define os horários disponíveis. Os pais recebem um link para escolher o melhor horário. A agenda é confirmada e os outros pais veem apenas os horários ainda livres. Permite reagendamento pelo mesmo canal. <strong>Benefício:</strong> Autonomia para os pais e controle para a escola.
             </p>
             <h4 class="module-title">3. Automação do Processo de Rematrícula</h4>
             <p>
-                O sistema envia mensagens em massa nas datas definidas com o link de rematrícula. A plataforma verifica continuamente no ERP quem já se rematriculou e envia lembretes automáticos apenas para os pendentes. <strong>Benefício:</strong> Aumenta a taxa de conversão das rematrículas e reduz o trabalho de acompanhamento manual.
+                O sistema envia mensagens em massa com o link de rematrícula e verifica continuamente no ERP quem já concluiu, enviando lembretes automáticos apenas para os pendentes. <strong>Benefício:</strong> Aumenta a taxa de conversão das rematrículas e reduz o trabalho manual.
             </p>
             <h4 class="module-title">4. Notificação de Cobrança para Inadimplentes</h4>
             <p>
-                A plataforma identifica no ERP os responsáveis com pendências financeiras e envia lembretes de cobrança de forma automática e discreta via WhatsApp. <strong>Benefício:</strong> Profissionaliza a cobrança, reduz a inadimplência e evita conversas desconfortáveis.
+                A plataforma identifica no ERP os responsáveis com pendências financeiras e envia lembretes de cobrança de forma automática e discreta via WhatsApp. <strong>Benefício:</strong> Profissionaliza a cobrança e reduz a inadimplência.
             </p>
             <h4 class="module-title">5. Dashboard Administrativo</h4>
             <p>
-                Um painel de controle para a gestão da escola, onde será possível configurar as datas de envio, visualizar o status dos agendamentos e, principalmente, acompanhar o número de rematrículas concluídas em tempo real. <strong>Benefício:</strong> Visão clara e centralizada dos principais indicadores de gestão.
+                Um painel de controle para a gestão da escola configurar as campanhas, visualizar status e acompanhar o número de rematrículas concluídas em tempo real. <strong>Benefício:</strong> Visão clara e centralizada dos principais indicadores.
             </p>
         </section>
 
@@ -331,29 +369,29 @@
             <h3>Investimento para Desenvolvimento</h3>
             <div class="investment-details">
                 <div class="investment-item">
-                    <p>Valor/Hora (Base):</p> <p class="price" id="valorHora">R$ 50,00</p>
+                    <p>Valor/Hora (Base):</p> <p class="price">R$ 50,00</p>
                 </div>
                 <div class="investment-item">
-                    <p>Horas Estimadas (Com Automação Padrão Bubble.io):</p> <p class="price" id="horasCore">415 h</p>
+                    <p>Horas (Automação Padrão Bubble.io):</p> <p class="price">425 h</p>
                 </div>
-                <div class="investment-item">
-                    <p>Horas Estimadas (Com Automação Avançada N8N):</p> <p class="price" id="horasFull">460 h</p>
+                <div class="investment-item total-project">
+                    <p>Total (Automação Padrão Bubble.io):</p> <p class="price highlight-price">R$ 21.250,00</p>
                 </div>
             </div>
         </section>
 
         <section id="investment-options">
-            <h3>Opções de Escopo e Investimento</h3>
+            <h3>Opções de Escopo</h3>
             <div class="options-box">
-                <p><strong>Opção 1: Automação Avançada com N8N</strong> (Maior flexibilidade para workflows complexos – 460h)</p>
+                <p><strong>Opção 1: Automação Padrão com Bubble.io</strong> (Solução robusta e integrada – 425h)</p>
                 <ul>
-                    <li>Ideal para criar lógicas de comunicação interativas e complexas (ex: agendamento passo a passo dentro do WhatsApp).</li>
-                    <li>Valor Total: <span class="price highlight-price">R$ 23.000,00</span></li>
+                    <li>Utiliza o motor de workflows do próprio Bubble.io para executar todas as automações. Eficiente e com menor custo de infraestrutura.</li>
+                    <li>Valor: <span class="price">R$ 21.250,00</span></li>
                 </ul>
-                <p style="margin-top:10px;"><strong>Opção 2: Automação Padrão com Bubble.io</strong> (Solução robusta e integrada – 415h)</p>
+                <p style="margin-top:10px;"><strong>Opção 2: Automação Avançada com N8N</strong> (Maior flexibilidade e poder – 550h)</p>
                 <ul>
-                    <li>Utiliza o motor de workflows do próprio Bubble.io para executar todas as automações. Eficiente para a maioria dos casos de uso.</li>
-                    <li>Valor Total: <span class="price highlight-price">R$ 20.750,00</span></li>
+                    <li>Usa um agente externo (N8N) para as automações, permitindo lógicas mais complexas e interativas, com maior escalabilidade futura.</li>
+                    <li>Valor: <span class="price">R$ 27.500,00</span></li>
                 </ul>
             </div>
         </section>
@@ -408,22 +446,22 @@
             <h3 style="text-align: center; border-bottom: none; margin-bottom: 5px; font-size: 1.3em;">Anexo A</h3>
             <h3 style="text-align: center; border-bottom: none; margin-top: 0px; font-size: 1.3em;">Detalhamento das Funcionalidades</h3>
             <p class="appendix-note">
-                A tabela abaixo detalha as funcionalidades. Total de horas (Opção N8N): <strong>460h</strong>. Total de horas (Opção Bubble.io): <strong>415h</strong>.
+                A tabela abaixo detalha as funcionalidades. Total de horas (Opção Bubble.io): <strong>425h</strong>. Total de horas (Opção N8N): <strong>550h</strong>.
             </p>
-            <div id="functionalities-appendix-wrapper" style="overflow-x:auto;">
+            <div id="functionalities-appendix-wrapper">
                 <table>
                     <thead>
                         <tr>
                             <th>Funcionalidade</th>
-                            <th>Descrição</th>
+                            <th>Descrição Detalhada</th>
                             <th>Módulo</th>
-                            <th>Frente</th>
-                            <th style="text-align:center;">Horas (N8N)</th>
                             <th style="text-align:center;">Horas (Bubble)</th>
+                            <th style="text-align:center;">Horas (N8N)</th>
                         </tr>
                     </thead>
                     <tbody id="func-table-body">
-                        </tbody>
+                        <!-- Conteúdo inserido via JS -->
+                    </tbody>
                 </table>
             </div>
         </section>
@@ -449,44 +487,70 @@
             }
 
             const funcionalidades = [
-                { funcionalidade: 'Setup Inicial e UI/UX Base', descricao: 'Criação da estrutura do app em Bubble.io, design system, páginas base e sistema de login para administradores.', modulo: 'Base', frente: 'FULL-STACK', horasN8N: 40, horasBubble: 40 },
-                { funcionalidade: 'Conector com Banco de Dados SQL', descricao: 'Desenvolvimento e configuração da conexão segura de leitura entre o Bubble.io e o banco de dados SQL do ERP da escola.', modulo: 'Integração', frente: 'BACK-END', horasN8N: 50, horasBubble: 60 },
-                { funcionalidade: 'Integração com API de WhatsApp', descricao: 'Configuração da API de WhatsApp para envio e recebimento de mensagens, gerenciamento de templates e webhooks.', modulo: 'Integração', frente: 'BACK-END', horasN8N: 30, horasBubble: 30 },
-                { funcionalidade: 'Painel Admin: Gestão de Reuniões', descricao: 'Interface para a secretaria definir turmas, datas e horários disponíveis para as reuniões semestrais.', modulo: 'Admin', frente: 'FRONT-END', horasN8N: 30, horasBubble: 30 },
-                { funcionalidade: 'Workflow: Envio de Convites para Reunião', descricao: 'Lógica para enviar mensagens via WhatsApp para os pais de cada turma com o link para agendamento.', modulo: 'Automação', frente: 'BACK-END', horasN8N: 20, horasBubble: 25 },
-                { funcionalidade: 'Página/Fluxo de Agendamento', descricao: 'Interface web ou fluxo interativo onde o pai escolhe o horário. O sistema deve exibir apenas horários livres e confirmar a escolha.', modulo: 'Pais', frente: 'FULL-STACK', horasN8N: 50, horasBubble: 60 },
-                { funcionalidade: 'Workflow: Edição de Agendamento', descricao: 'Lógica que permite ao pai, via WhatsApp, solicitar o cancelamento ou a alteração do horário agendado.', modulo: 'Automação', frente: 'BACK-END', horasN8N: 40, horasBubble: 50 },
-                { funcionalidade: 'Painel Admin: Gestão de Campanhas', descricao: 'Interface para configurar as datas de início e fim da campanha de rematrícula e inserir o link de destino.', modulo: 'Admin', frente: 'FRONT-END', horasN8N: 20, horasBubble: 20 },
-                { funcionalidade: 'Workflow: Disparo Inicial de Rematrícula', descricao: 'Lógica para enviar a mensagem inicial da campanha de rematrícula para todos os pais na data configurada.', modulo: 'Automação', frente: 'BACK-END', horasN8N: 15, horasBubble: 20 },
-                { funcionalidade: 'Workflow: Lembrete de Rematrícula', descricao: 'Lógica recorrente que lê o banco de dados SQL, identifica quem ainda não concluiu a rematrícula e envia lembretes.', modulo: 'Automação', frente: 'BACK-END', horasN8N: 50, horasBubble: 60 },
-                { funcionalidade: 'Workflow: Lembrete de Inadimplência', descricao: 'Lógica recorrente que lê o banco de dados SQL, identifica pais com pendências financeiras e envia uma notificação de cobrança.', modulo: 'Automação', frente: 'BACK-END', horasN8N: 45, horasBubble: 50 },
-                { funcionalidade: 'Dashboard de Indicadores', descricao: 'Desenvolvimento do painel administrativo que exibe o contador de rematrículas concluídas e outros status importantes.', modulo: 'Admin', frente: 'FULL-STACK', horasN8N: 30, horasBubble: 30 },
-                { funcionalidade: 'Desenvolvimento em N8N', descricao: 'Criação, teste e publicação dos workflows de automação no servidor N8N. (Exclusivo da Opção 1)', modulo: 'Automação', frente: 'N8N', horasN8N: 40, horasBubble: 0 },
+                // Módulo 1: Estrutura e Acessos
+                { funcionalidade: 'Estruturação do Banco de Dados', descricao: 'Criação das tabelas de usuários, logs, campanhas e agendamentos no Bubble.io.', modulo: 'Base', horasBubble: 10, horasN8N: 10 },
+                { funcionalidade: 'Design System e UI Kit', descricao: 'Definição da paleta de cores, tipografia e componentes visuais padrão da plataforma.', modulo: 'Base', horasBubble: 15, horasN8N: 15 },
+                { funcionalidade: 'Tela de Login para Administradores', descricao: 'Desenvolvimento da interface de login (UI) para acesso ao painel de gestão.', modulo: 'Base', horasBubble: 5, horasN8N: 5 },
+                { funcionalidade: 'Workflow de Autenticação', descricao: 'Lógica de backend para validar credenciais de administradores e gerenciar sessões.', modulo: 'Base', horasBubble: 5, horasN8N: 5 },
+                { funcionalidade: 'Fluxo de Recuperação de Senha', descricao: 'Telas e lógicas para que administradores possam redefinir suas senhas via e-mail.', modulo: 'Base', horasBubble: 5, horasN8N: 5 },
+
+                // Módulo 2: Integrações Core
+                { funcionalidade: 'Configuração do Conector SQL', descricao: 'Instalação e configuração do plugin de conexão com bancos de dados SQL externos.', modulo: 'Integração', horasBubble: 15, horasN8N: 15 },
+                { funcionalidade: 'Mapeamento de Tabelas do ERP', descricao: 'Criação das queries de leitura para tabelas de alunos, responsáveis, turmas e status financeiro.', modulo: 'Integração', horasBubble: 20, horasN8N: 20 },
+                { funcionalidade: 'Rotinas de Teste e Validação de Dados', descricao: 'Desenvolvimento de rotinas para garantir a integridade e atualização dos dados lidos do ERP.', modulo: 'Integração', horasBubble: 15, horasN8N: 15 },
+                { funcionalidade: 'Configuração do Gateway de WhatsApp', descricao: 'Autenticação e configuração da API Oficial do WhatsApp na plataforma.', modulo: 'Integração', horasBubble: 15, horasN8N: 15 },
+                { funcionalidade: 'Gestão de Templates de Mensagens', descricao: 'Criação e submissão para aprovação dos modelos de mensagens (reunião, rematrícula, cobrança).', modulo: 'Integração', horasBubble: 15, horasN8N: 15 },
+
+                // Módulo 3: Painel Administrativo
+                { funcionalidade: 'UI: Gestão de Campanhas', descricao: 'Interface para criar/editar campanhas de rematrícula, definindo datas de início e fim.', modulo: 'Admin', horasBubble: 15, horasN8N: 15 },
+                { funcionalidade: 'UI: Calendário de Reuniões', descricao: 'Interface visual para a secretaria definir e visualizar os horários disponíveis por turma.', modulo: 'Admin', horasBubble: 20, horasN8N: 20 },
+                { funcionalidade: 'UI: Dashboard de Métricas', descricao: 'Desenvolvimento dos elementos visuais do painel (gráficos, contadores, tabelas).', modulo: 'Admin', horasBubble: 15, horasN8N: 15 },
+                { funcionalidade: 'Lógica de Exibição de Dados no Dashboard', descricao: 'Workflows para alimentar o dashboard com dados de rematrículas e agendamentos.', modulo: 'Admin', horasBubble: 15, horasN8N: 15 },
+
+                // Módulo 4: Interface dos Pais
+                { funcionalidade: 'Desenvolvimento da Página de Agendamento', descricao: 'Criação da página web responsiva onde os pais realizarão o agendamento.', modulo: 'Pais', horasBubble: 20, horasN8N: 20 },
+                { funcionalidade: 'Lógica de Exibição de Horários', descricao: 'Workflow para buscar e exibir apenas os horários de reunião que ainda estão disponíveis.', modulo: 'Pais', horasBubble: 15, horasN8N: 15 },
+                { funcionalidade: 'Workflow de Confirmação de Agendamento', descricao: 'Lógica para salvar o horário escolhido pelo pai e marcá-lo como indisponível.', modulo: 'Pais', horasBubble: 15, horasN8N: 15 },
+                
+                // Módulo 5: Automação (Bubble.io)
+                { funcionalidade: 'WF (Bubble): Envio de Convites de Reunião', descricao: 'Rotina que lê as turmas e envia o link de agendamento para os pais.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
+                { funcionalidade: 'WF (Bubble): Confirmação e Lembretes de Reunião', descricao: 'Rotina que envia a confirmação do agendamento e um lembrete 24h antes.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
+                { funcionalidade: 'WF (Bubble): Lógica de Reagendamento', descricao: 'Rotina que libera o horário antigo e permite ao pai escolher um novo.', modulo: 'Automação Nativa', horasBubble: 25, horasN8N: 0 },
+                { funcionalidade: 'WF (Bubble): Disparo Inicial de Rematrícula', descricao: 'Rotina agendada para enviar a campanha de rematrícula na data configurada.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
+                { funcionalidade: 'WF (Bubble): Lembretes de Rematrícula', descricao: 'Rotina recorrente que consulta o ERP e envia lembretes para pendentes.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
+                { funcionalidade: 'WF (Bubble): Notificação de Inadimplentes', descricao: 'Rotina recorrente que consulta o ERP e envia cobranças para pendentes.', modulo: 'Automação Nativa', horasBubble: 30, horasN8N: 0 },
+
+                // Módulo 6: Automação (N8N)
+                { funcionalidade: 'Infraestrutura e Setup do N8N', descricao: 'Instalação, configuração e securitização do servidor N8N para a aplicação.', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 40 },
+                { funcionalidade: 'WF (N8N): Orquestração de Reuniões', descricao: 'Workflow completo para convite, confirmação, lembrete e reagendamento interativo.', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 70 },
+                { funcionalidade: 'WF (N8N): Campanha de Rematrícula', descricao: 'Workflow com múltiplas etapas para disparo inicial e lembretes (15, 7, 3 dias).', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 70 },
+                { funcionalidade: 'WF (N8N): Régua de Cobrança', descricao: 'Workflow com lógica escalonada para notificar inadimplentes (lembrete, aviso).', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 70 },
+                { funcionalidade: 'API de Conexão Bubble <> N8N', descricao: 'Desenvolvimento dos endpoints de API no Bubble para acionar os workflows do N8N.', modulo: 'Automação Externa', horasBubble: 0, horasN8N: 50 }
             ];
 
             const tabelaCorpo = document.getElementById('func-table-body');
             if (tabelaCorpo) {
-                let totalHorasN8N = 0;
                 let totalHorasBubble = 0;
+                let totalHorasN8N = 0;
+                const coreHours = 250; // Horas comuns a ambos os projetos
 
                 funcionalidades.forEach(item => {
                     const row = tabelaCorpo.insertRow();
                     row.insertCell().textContent = item.funcionalidade;
                     const descCell = row.insertCell();
-                    descCell.innerHTML = item.descricao.replace(/\n/g, '<br>');
+                    descCell.innerHTML = item.descricao;
                     row.insertCell().textContent = item.modulo;
-                    row.insertCell().textContent = item.frente;
-
-                    const horasN8NCell = row.insertCell();
-                    horasN8NCell.textContent = item.horasN8N > 0 ? item.horasN8N : '-';
-                    horasN8NCell.style.textAlign = 'center';
 
                     const horasBubbleCell = row.insertCell();
-                    horasBubbleCell.textContent = item.horasBubble > 0 ? item.horasBubble : '-';
+                    horasBubbleCell.textContent = item.horasBubble > 0 ? item.horasBubble + 'h' : '-';
                     horasBubbleCell.style.textAlign = 'center';
 
-                    totalHorasN8N += item.horasN8N;
+                    const horasN8NCell = row.insertCell();
+                    horasN8NCell.textContent = item.horasN8N > 0 ? item.horasN8N + 'h' : '-';
+                    horasN8NCell.style.textAlign = 'center';
+
                     totalHorasBubble += item.horasBubble;
+                    totalHorasN8N += item.horasN8N;
                 });
                 
                 // Add Total Row
@@ -494,18 +558,18 @@
                 totalRow.style.fontWeight = 'bold';
                 totalRow.style.backgroundColor = 'var(--cor-apoio-lavanda)';
                 const totalCell1 = totalRow.insertCell();
-                totalCell1.colSpan = "4";
+                totalCell1.colSpan = "3";
                 totalCell1.textContent = 'TOTAL DE HORAS ESTIMADO';
                 totalCell1.style.textAlign = 'right';
                 totalCell1.style.paddingRight = '10px';
                 
-                const totalHorasN8NCell = totalRow.insertCell();
-                totalHorasN8NCell.textContent = totalHorasN8N + 'h';
-                totalHorasN8NCell.style.textAlign = 'center';
-
                 const totalHorasBubbleCell = totalRow.insertCell();
                 totalHorasBubbleCell.textContent = totalHorasBubble + 'h';
                 totalHorasBubbleCell.style.textAlign = 'center';
+
+                const totalHorasN8NCell = totalRow.insertCell();
+                totalHorasN8NCell.textContent = (coreHours + totalHorasN8N) + 'h';
+                totalHorasN8NCell.style.textAlign = 'center';
             }
         });
     </script>
