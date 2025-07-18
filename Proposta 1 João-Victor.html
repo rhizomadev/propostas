@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial - Rhizoma para Projeto Plataforma CDL Ponte Nova</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-principal-roxo-escuro: #4A0072;
+            --cor-secundaria-roxo: #6A0DAD;
+            --cor-apoio-lavanda: #E6E6FA;
+            --cor-texto-claro: #FFFFFF;
+            --cor-texto-escuro: #333333;
+            --cor-texto-secundario: #555555;
+            --cor-borda: #D1C4E9;
+            --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --sombra-media: 0 6px 20px rgba(74, 0, 114, 0.15);
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f8fe;
+            color: var(--cor-texto-escuro);
+            line-height: 1.5; 
+        }
+
+        .container {
+            max-width: 960px; 
+            margin: 20px auto; 
+            padding: 25px;   
+            background-color: var(--cor-texto-claro);
+            box-shadow: var(--sombra-media);
+            border-radius: 10px; 
+            border-top: 8px solid var(--cor-principal-roxo-escuro); 
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 20px; 
+            border-bottom: 1px solid var(--cor-apoio-lavanda); 
+            margin-bottom: 20px; 
+        }
+
+        .logo { display: flex; align-items: center; }
+        #companyLogo { max-height: 60px; margin-right: 15px; } 
+        .logo-text h1 { font-family: 'Montserrat', sans-serif; color: var(--cor-principal-roxo-escuro); font-size: 2.4em; margin: 0; letter-spacing: -0.5px; } 
+
+        .header-details { text-align: right; padding-top: 0; } 
+        .header-details h2 { font-family: 'Montserrat', sans-serif; color: var(--cor-principal-roxo-escuro); font-size: 1.6em; margin-bottom: 8px; } 
+        .header-details p { font-size: 0.9em; margin: 3px 0; color: var(--cor-texto-secundario); } 
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--cor-principal-roxo-escuro);
+            font-size: 1.4em; 
+            margin-top: 20px; 
+            margin-bottom: 12px; 
+            padding-bottom: 6px; 
+            border-bottom: 1px solid var(--cor-secundaria-roxo);
+            position: relative; 
+        }
+        h3::after {display: none;}
+        
+        h4.module-title {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--cor-secundaria-roxo);
+            font-size: 1.1em; 
+            margin-top: 12px; 
+            margin-bottom: 4px; 
+        }
+
+        section { margin-bottom: 20px; }
+
+        p, li {
+            font-size: 0.95em; 
+            margin-bottom: 8px; 
+        }
+
+        #key-modules-benefits ul, #why-rhizoma ul, #value-proposition ul {
+            list-style-type: disc;
+            padding-left: 20px; 
+            font-size: 0.95em; 
+        }
+        #key-modules-benefits li, #why-rhizoma li, #value-proposition li {
+            margin-bottom: 5px; 
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 12px; box-shadow: var(--sombra-suave); border-radius: 8px; /* overflow: hidden; */ /* Removido overflow:hidden da tabela para o wrapper controlar */}
+        th, td { border: 1px solid var(--cor-borda); padding: 8px 10px; text-align: left; font-size: 0.85em; } 
+        thead tr { background-color: var(--cor-principal-roxo-escuro); color: var(--cor-texto-claro); font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 0.2px; }
+        tbody tr:nth-child(even) { background-color: var(--cor-apoio-lavanda); }
+        tbody tr:hover { background-color: #d1c4e9; transition: background-color 0.3s ease; }
+
+        .investment-details, .options-box { background-color: var(--cor-apoio-lavanda); padding: 12px; border-radius: 8px; border-left: 4px solid var(--cor-secundaria-roxo); margin-top: 12px; } 
+        .investment-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px dashed var(--cor-borda); }
+        .investment-item:last-child { border-bottom: none; }
+        .investment-item p, .options-box p { margin: 3px 0; font-size: 1.0em; } 
+        .options-box ul { margin-top: 3px; padding-left: 16px; }
+        .options-box li { font-size: 0.9em; margin-bottom: 3px; }
+        .investment-item .price, .options-box .price { font-weight: 600; color: var(--cor-principal-roxo-escuro); }
+
+        .total-project p { font-size: 1.05em; font-weight: bold; }
+        .total-project .highlight-price { color: var(--cor-secundaria-roxo); font-size: 1.2em; }
+
+        #recurring-costs .costs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 12px; } 
+        .cost-card { background-color: var(--cor-texto-claro); border: 1px solid var(--cor-borda); padding: 12px; border-radius: 8px; box-shadow: var(--sombra-suave); }
+        .cost-card h4 { font-family: 'Montserrat', sans-serif; color: var(--cor-secundaria-roxo); margin-top: 0; margin-bottom: 8px; font-size: 1.05em; }
+        .cost-card p { font-size: 0.85em; margin-bottom: 5px; }
+
+        ul.payment-terms { list-style-type: disc; padding-left: 18px; font-size: 0.95em; }
+        ul.payment-terms li { margin-bottom: 5px; }
+        .payment-option-box { margin-top: 12px; padding: 10px; background-color: #fdfcff; border:1px dashed var(--cor-borda); border-radius: 6px; }
+        .appendix-note { font-style: italic; color: var(--cor-texto-secundario); margin-bottom: 12px; padding: 6px; background-color: #f9f8fe; border-left: 2px solid var(--cor-secundaria-roxo); font-size: 0.9em;}
+
+        footer { text-align: center; margin-top: 25px; padding-top: 12px; border-top: 1px solid var(--cor-apoio-lavanda); font-size: 0.8em; color: var(--cor-texto-secundario); }
+        footer p { margin: 2px 0; }
+        
+        /* --- INÍCIO DAS REGRAS RESPONSIVAS --- */
+        @media (max-width: 768px) { 
+            .container {
+                margin: 15px; 
+                padding: 20px;
+                width: auto; 
+            }
+
+            header {
+                flex-direction: column; 
+                align-items: center;   
+                text-align: center;    
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            .logo {
+                margin-bottom: 15px; 
+            }
+            
+            #companyLogo { max-height: 50px; } /* Reduzido o logo para mobile */
+
+            .logo-text h1 {
+                font-size: 2.0em; /* Reduzido para mobile */
+            }
+
+            .header-details {
+                text-align: center; 
+                padding-top: 0;
+                width:100%; 
+            }
+            .header-details p {
+                font-size: 0.85em; /* Reduzido para mobile */
+            }
+
+            .header-details h2 {
+                font-size: 1.4em; /* Reduzido para mobile */
+            }
+
+            h3 {
+                font-size: 1.25em; /* Reduzido para mobile */
+            }
+            h4.module-title {
+                font-size: 1.0em; /* Reduzido para mobile */
+            }
+            p, li, #key-modules-benefits ul, #why-rhizoma ul, #value-proposition ul {
+                font-size: 0.92em; /* Leve ajuste para mobile */
+            }
+
+            #functionalities-appendix-wrapper { 
+                overflow-x: auto; 
+                -webkit-overflow-scrolling: touch; 
+                padding-bottom:10px; 
+            }
+
+            #functionalities-appendix-wrapper table { 
+                min-width: 600px; /* Ajustado para forçar rolagem se necessário */
+                font-size: 0.8em; 
+            }
+            
+            #functionalities-appendix-wrapper th, 
+            #functionalities-appendix-wrapper td {
+                padding: 6px 8px; 
+                white-space: nowrap; 
+            }
+
+            #recurring-costs .costs-grid {
+                grid-template-columns: 1fr; 
+                gap: 10px;
+            }
+
+            .options-box ul, ul.payment-terms {
+                padding-left: 18px;
+            }
+        }
+
+        @media (max-width: 480px) { 
+            .container { padding: 12px; margin: 10px; border-top-width: 6px; }
+            #companyLogo { max-height: 45px; }
+            .logo-text h1 { font-size: 1.7em; }
+            .header-details h2 { font-size: 1.2em; }
+            h3 { font-size: 1.15em; }
+            p, li, #key-modules-benefits ul, #why-rhizoma ul, #value-proposition ul { font-size: 0.85em; }
+            .total-project .highlight-price { font-size: 1.1em; }
+            #functionalities-appendix-wrapper table { min-width: 450px; } /* Mais reduzido */
+            #functionalities-appendix-wrapper th, 
+            #functionalities-appendix-wrapper td { font-size: 0.7em; padding: 5px 6px;} /* Ainda menor */
+        }
+        /* --- FIM DAS REGRAS RESPONSIVAS --- */
+
+        @media print {
+            body { font-size: 8pt; } 
+            .container { padding: 10px; margin: 0 auto; border-top-width: 5px; width: 100% !important; max-width: 100% !important; box-shadow: none;}
+            h3 { font-size: 1.2em; }
+            h4.module-title { font-size: 1em; }
+            p, li { font-size: 0.9pt; margin-bottom: 6px; }
+            ul { padding-left: 15px;}
+            th, td { padding: 6px 8px; font-size: 0.75em; }
+            .investment-details, .options-box { padding: 10px; }
+            .investment-item p, .options-box p { font-size: 0.95em; }
+            .options-box li { font-size: 0.85em; }
+            .total-project p { font-size: 1em; }
+            .total-project .highlight-price { font-size: 1.1em; }
+            #recurring-costs .costs-grid { gap: 8px; grid-template-columns: 1fr; }
+            .cost-card { padding: 10px; }
+            .cost-card h4 { font-size: 0.95em; }
+            .cost-card p { font-size: 0.8em; }
+            ul.payment-terms { font-size: 0.9em; padding-left: 15px;}
+            .payment-option-box { padding: 8px; }
+            .appendix-note { font-size: 0.85em; padding: 5px; display: block; } 
+            footer, header, #next-steps { display: none;} 
+            body::before { 
+                content: "Rhizoma - Proposta Comercial para Projeto Plataforma CDL Ponte Nova"; 
+                display: block; text-align: center; font-size: 10pt; font-weight: bold; 
+                margin-bottom: 15px; border-bottom: 1px solid #000; padding-bottom: 8px; 
+            }
+            #functionalities-appendix { margin-top: 15px; page-break-before: always; }
+             #introduction, #executive-summary, #why-rhizoma, #value-proposition, #key-modules-benefits, #delivery-timeframe, #investment, #investment-options, #payment-conditions, #recurring-costs, #functionalities-appendix {
+                page-break-inside: avoid; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://19842abecef313a41bd8419d758f5c95.cdn.bubble.io/f1741049920492x827560874996382700/Sem%20T%C3%ADtulo-2-min.png?_gl=1*y4ctui*_gcl_au*NjE4ODgxODc2LjE3NDg1NTgxMjc.*_ga*MjEwMDA1MTQzOC4xNzQ2NTU5MjA5*_ga_BFPVR2DEE2*czE3NDg2MDQzOTgkbzE3JGcxJHQxNzQ4NjQzMzQ1JGo0NyRsMCRoMA.." alt="Logotipo Rhizoma" id="companyLogo">
+                <div class="logo-text">
+                    <h1>Rhizoma</h1>
+                </div>
+            </div>
+            <div class="header-details">
+                <h2>Proposta Comercial</h2>
+                <p><strong>Para:</strong> João e Victor</p>
+                <p><strong>Referente ao:</strong> Projeto Plataforma para CDL Ponte Nova</p>
+                <p><strong>Data:</strong> <span id="currentDate"></span></p>
+                <p><strong>Validade:</strong> 06/06/2025</p>
+                <p><strong>Ref:</strong> Gestão de Mão de Obra Avulsa (CDL Ponte Nova)</p>
+            </div>
+        </header>
+
+        <section id="introduction">
+            <h3>Prezados João e Victor,</h3>
+            <p>Apresentamos esta proposta para o desenvolvimento da sua plataforma de gestão de mão de obra avulsa. Visamos criar uma ferramenta estratégica para sua iniciativa junto à CDL Ponte Nova, otimizando a conexão entre estabelecimentos (bares, restaurantes, etc.) e profissionais temporários.</p>
+        </section>
+
+        <section id="executive-summary">
+            <h3>Resumo da Proposta</h3>
+            <ul>
+                <li><strong>Solução:</strong> Webapp customizado para gestão eficiente de mão de obra temporária (freelancers).</li>
+                <li><strong>Objetivo:</strong> Conectar estabelecimentos a profissionais, simplificando contratação e gerenciamento.</li>
+                <li><strong>Valor para CDL Ponte Nova:</strong> Ferramenta de modernização e fomento ao comércio local.</li>
+                <li><strong>Investimento:</strong> A partir de R$ 16.850,00 (escopo reduzido).</li>
+                <li><strong>Prazo Estimado:</strong> 60-90 dias (conforme escopo).</li>
+            </ul>
+        </section>
+
+        <section id="why-rhizoma">
+            <h3>Por Que a Rhizoma?</h3>
+            <ul>
+                <li><strong>Entrega Ágil e Econômica:</strong> Nossa base de software e expertise em Bubble.io aceleram o desenvolvimento, otimizando seu investimento.</li>
+                <li><strong>Foco na Sua Visão:</strong> Colaboramos de perto para transformar sua ideia em uma plataforma robusta e eficaz para a CDL.</li>
+                <li><strong>Tecnologia Moderna:</strong> Solução flexível, escalável e de fácil manutenção.</li>
+            </ul>
+        </section>
+        
+        <section id="value-proposition">
+            <h3>A Plataforma: Solução e Impacto</h3>
+            <p>Sua plataforma resolverá o desafio da contratação ágil de profissionais para demandas pontuais em bares, restaurantes e eventos. Para a CDL Ponte Nova e seus associados, os benefícios incluem:</p>
+            <ul>
+                <li>Otimização na busca e contratação de freelancers.</li>
+                <li>Canal centralizado para vagas e profissionais.</li>
+                <li>Modernização e valor agregado aos serviços da CDL.</li>
+                <li>Maior flexibilidade e controle para gestores e profissionais.</li>
+            </ul>
+        </section>
+
+        <section id="key-modules-benefits">
+            <h3>Módulos e Benefícios Chave</h3>
+            <h4 class="module-title">1. Gestão de Usuários e Perfis</h4>
+            <p>Perfis distintos (Admins, Estabelecimentos, Profissionais) com cadastro e login seguros. <strong>Benefício:</strong> Organização e segurança no acesso.</p>
+            <h4 class="module-title">2. Vagas e Oportunidades Temporárias</h4>
+            <p>Publicação detalhada de vagas avulsas e candidatura simplificada. <strong>Benefício:</strong> Conexão ágil entre demanda e oferta de trabalho.</p>
+            <h4 class="module-title">3. Plataforma Administrativa Central</h4>
+            <p>Painel para gestão completa de usuários, vagas, e termos. <strong>Benefício:</strong> Controle total da operação da plataforma.</p>
+            <h4 class="module-title">4. Comunicação e Notificações</h4>
+            <p>Alertas web e via WhatsApp para interações importantes. <strong>Benefício:</strong> Usuários informados e processos agilizados.</p>
+            <h4 class="module-title">5. (Opcional) Pagamentos e Assinaturas</h4>
+            <p>Integração com Stripe para transações e/ou planos de assinatura. <strong>Benefício:</strong> Facilita monetização e pagamentos.</p>
+            <p><em>O detalhamento completo das funcionalidades encontra-se no Anexo A.</em></p>
+        </section>
+
+        <section id="delivery-timeframe">
+            <h3>Prazo de Entrega Estimado</h3>
+            <p><strong>Escopo Completo (Opção 1):</strong> 90 dias corridos, após assinatura e sinal.</p>
+            <p><strong>Escopo Reduzido (Opção 2):</strong> Aprox. 60-75 dias corridos (a confirmar).</p>
+            <p><em>O prazo considera vossa colaboração nas aprovações. Cronograma detalhado será fornecido.</em></p>
+        </section>
+
+        <section id="investment">
+            <h3>Investimento para Desenvolvimento</h3>
+            <div class="investment-details">
+                <div class="investment-item">
+                    <p>Valor/Hora (Base):</p> <p class="price" id="valorHora">R$ 50,00</p>
+                </div>
+                <div class="investment-item">
+                    <p>Horas (Escopo Completo):</p> <p class="price" id="totalHorasDev">437 h</p>
+                </div>
+                <div class="investment-item total-project">
+                    <p>Total (Escopo Completo):</p> <p class="price highlight-price" id="valorTotalProjeto">R$ 21.850,00</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="investment-options">
+            <h3>Opções de Escopo e Descontos</h3>
+            <div class="options-box">
+                <p><strong>Opção 1: Escopo Completo</strong> (Todas funcionalidades, incl. pagamentos)</p>
+                <ul><li>Valor: <span class="price">R$ 21.850,00</span></li></ul>
+                <p><strong>Opção 2: Escopo Reduzido</strong> (Sem "Tela para Assinatura" e "Configuração de Stripe" - 100h a menos)</p>
+                <ul><li>Valor: <span class="price highlight-price">R$ 16.850,00</span> (337h)</li></ul>
+            </div>
+
+            <div class="options-box" style="margin-top: 12px; border-left-color: var(--cor-principal-roxo-escuro);">
+                 <p><strong>Descontos (Não Cumulativos):</strong></p>
+                 <p><strong>1. Parceria (Equity):</strong> <strong>-15%</strong> no valor do escopo escolhido com 10% de equity da Rhizoma no negócio.</p>
+                <ul>
+                    <li>Opção 1 c/ Equity: <span class="price">R$ 18.572,50</span></li>
+                    <li>Opção 2 c/ Equity: <span class="price">R$ 14.322,50</span></li>
+                </ul>
+                <p style="margin-top:8px;"><strong>2. Pagamento à Vista:</strong> Desconto de <strong>7%</strong> no valor do escopo para pgto. integral na contratação.</p>
+                <ul>
+                    <li>Opção 1 à Vista: <span class="price">R$ 20.320,50</span></li>
+                    <li>Opção 2 à Vista: <span class="price">R$ 15.670,50</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="payment-conditions">
+            <h3>Condições de Pagamento (Padrão Parcelado)</h3>
+            <p>Para pagamento parcelado por marcos (sem descontos de equity ou à vista):</p>
+            <ul class="payment-terms">
+                <li><strong>30%</strong> Sinal (início).</li>
+                <li><strong>40%</strong> Entrega do MVP para homologação.</li>
+                <li><strong>30%</strong> Entrega final e publicação.</li>
+            </ul>
+            <p style="font-size:0.9em; margin-top:8px;"><em>Pgto. via PIX/transferência. Custos de manutenção e serviços de terceiros (Servidor, Domínio, API WhatsApp) são separados.</em></p>
+        </section>
+
+        <section id="recurring-costs">
+            <h3>Custos Mensais Estimados (Pós-Desenvolvimento)</h3>
+            <div class="costs-grid">
+                <div class="cost-card">
+                    <h4>Base (<250 usuários)</h4>
+                    <p><strong>Servidor (Bubble):</strong> ~US$ 32</p>
+                    <p><strong>Domínio:</strong> ~R$ 3,33</p>
+                    <p><strong>API WA:</strong> US$ 10-20+</p>
+                    <p><strong>Manut. Rhizoma:</strong> R$ 990</p>
+                </div>
+                <div class="cost-card">
+                    <h4>Intermediário (250-750)</h4>
+                    <p><strong>Servidor (Bubble):</strong> ~US$ 40+</p>
+                    <p><strong>Domínio:</strong> ~R$ 3,33</p>
+                     <p><strong>API WA:</strong> US$ 20-50+</p>
+                    <p><strong>Manut. Rhizoma:</strong> R$ 1.500</p>
+                </div>
+                <div class="cost-card">
+                    <h4>Avançado (>750)</h4>
+                    <p><strong>Servidor (Bubble):</strong> ~US$ 60+</p>
+                    <p><strong>Domínio:</strong> ~R$ 3,33</p>
+                    <p><strong>API WA:</strong> US$ 50-100+</p>
+                    <p><strong>Manut. Rhizoma:</strong> R$ 1.900</p>
+                </div>
+            </div>
+             <p style="font-size: 0.8em; margin-top: 8px; text-align: center;"><em>Custos de Servidor, Domínio e API WhatsApp são estimativas pagas por vocês aos provedores. Manutenção Rhizoma cobre suporte e correções.</em></p>
+        </section>
+
+        <section id="next-steps">
+            <h3>Próximos Passos</h3>
+            <p>João e Victor, estamos à disposição para discutir esta proposta e alinhar os detalhes para iniciarmos o desenvolvimento da sua plataforma. <strong>Qual o melhor dia e horário para uma conversa na próxima semana?</strong></p>
+        </section>
+        
+        <hr style="border: none; border-top: 1px dashed var(--cor-borda); margin-top: 25px; margin-bottom: 15px;">
+
+        <section id="functionalities-appendix"> 
+            <h3 style="text-align: center; border-bottom: none; margin-bottom:5px; font-size: 1.3em;">Anexo A</h3>
+            <h3 style="text-align: center; border-bottom: none; margin-top:0px; font-size: 1.3em;">Detalhamento Completo das Funcionalidades</h3>
+            <p class="appendix-note">A tabela abaixo detalha cada funcionalidade do Escopo Completo (Opção 1).</p>
+            <div id="functionalities-appendix-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Funcionalidade</th>
+                            <th>Descrição</th>
+                            <th>Módulo/Escopo</th>
+                            <th>Frente de Desenvolvimento</th>
+                            <th>Estimativa de Horas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <p><strong>Rhizoma</strong></p>
+            <p>rafael@rhizo.ma | (27) 99284-5455</p>
+            <p>&copy; <span id="currentYear"></span> Rhizoma. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateElement = document.getElementById('currentDate');
+            if (dateElement) {
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const proposalDate = new Date('2025-05-30T19:51:00-03:00'); 
+                dateElement.textContent = proposalDate.toLocaleDateString('pt-BR', options);
+            }
+
+            const yearElement = document.getElementById('currentYear');
+            if (yearElement) {
+                yearElement.textContent = new Date('2025-05-30T19:51:00-03:00').getFullYear();
+            }
+
+            const funcionalidades = [
+                { funcionalidade: "Tela de \"página inicial\"", descricao: "Tela com a finalidade de dar uma breve apresentação do app seguida de uma tela que possibilita o usuário escolher se quer logar ou se cadastrar", modulo: "App", frente: "FRONT-END", horas: 6 },
+                { funcionalidade: "Tela de \"login\"", descricao: "Tela que possibilita o usuário de executar as seguintes ações:\n- login com possibilidade de persistir a senha (funcionalidade lembrar-me);\n- acessar fluxo de esqueci minha senha\n- acessar fluxo de cadastro\n- integração com backend\n- tratamento da exibição de erros (erros amigáveis).", modulo: "App", frente: "FRONT-END", horas: 6 },
+                { funcionalidade: "Integração com sistema de comunicação via Whatsapp", descricao: "Realizar integração com API terceira que possibilita a comunicação via API para envio de mensagens no Whatsapp do usuário", modulo: "App", frente: "BACK-END", horas: 12 },
+                { funcionalidade: "Sistema de código de confirmação", descricao: "Desenvolver sistema de confirmação de código genérico que possa ser reutilizado nos seguintes fluxos:\n- confirmação de número de celular;\n- suporte à futuros fluxos que poderão utilizar código de conf. via whatsapp;\n- disponibilização de endpoint para envio de código de conf.;\n- disponibilização de endpoint para confirmação do código", modulo: "App", frente: "BACK-END", horas: 10 },
+                { funcionalidade: "Fluxo de recuperação de senha", descricao: "Realizar desenvolvimento de lógica para recuperação de senha usando comunicação via Whatsapp (desenvolvimento estimado no item \"Sistema de código de confirmação\"), desenvolvimento deve incluir:\n- regra de negócio para alteração de senha;\n- enviar URL autenticado via whatsapp para que usuário consiga realizar troca da senha;\n- confirmação de código concatenado no link gerado automaticamente;", modulo: "App", frente: "BACK-END", horas: 6 },
+                { funcionalidade: "Telas do fluxo de recuperação de senha", descricao: "Desenvolvimento das seguintes telas do fluxo de recuperação de senha:\n- tela para informar o número de celular da conta;\n- integração com back para identificação por número de ceular e disparo de URL para que o usuário possa alterar sua senha (concatenar código de confirmação no URL);\n- tela pós disparo de mensagem com sucesso (tela \"confira seu whatsapp\");\n- tratamento da exibição de erros (erros amigáveis).", modulo: "App", frente: "FRONT-END", horas: 8 },
+                { funcionalidade: "Tela de exibição dos Termos de Uso e Política de Privacidade", descricao: "Desenvolver tela que exibe \"Termos de Uso\" e \"Política de Privacidade\", deve conter:\n- integração com o backend\n- exibição dos termos de uso e política de privacidade vigentes previamente configurados no backend", modulo: "App", frente: "FRONT-END", horas: 4 },
+                { funcionalidade: "Telas do fluxo de cadastro de usuário", descricao: "Desenvolver telas do fluxo de cadastro, contendo:\n- tela para inserção de email e senha, para iniciar o cadastro;\n- tela com formulário para inserção de dados pessoais e endereço;\n- tela para inserção do número de celular (deve realizar disparo de código para whatsapp);\n- tela para confirmação de código enviado para whatsapp;\n- popup de aviso que a conta está em análise;\n- integração com backend em todas as telas", modulo: "App", frente: "FRONT-END", horas: 12 },
+                { funcionalidade: "Tela para assinatura", descricao: "Desenvolver fluxo de captura de assinaturas", modulo: "App", frente: "FRONT-END", horas: 50 },
+                { funcionalidade: "Rotas para cadastro de usuário", descricao: "Disponibilizar rotas para criação de conta dos usuários, deve possibilitar coleta de dados separadas por tela, para que caso o usuário interrompa o fluxo de cadastro retome do passo em que parou. Deve contemplar:\n- persistência de dados do novo usuário no banco de dados;\n- criação de usuário no banco de dados com status \"em avaliação\", para que administradores possam validar os dados do usuário antes que ele use a plataforma;\n- rota para envio de código de confirmação do cadastro;\n- rota para confirmação do código de cadastro.\n- não permitir cadastro de menores de 18 anos", modulo: "App", frente: "BACK-END", horas: 6 },
+                { funcionalidade: "Plataforma administrativa", descricao: "Plataforma administrativa com as seguintes funcionalidades:\n- gestão de termos de uso e política de privacidade;\n- gestão de usuários (aprovação, dados cadastrais, congelamento);\n- gestão de vagas;\n- funcionallidade para repetição de vagas em poucos cliques;\n- gestão de estabelecimentos;\n- deve possibilitar fluxo de recuperação de senha dos usuários com geração de link para mudar senha;\n- gestão de indicações", modulo: "Plataforma ADM", frente: "FULL-STACK", horas: 28 },
+                { funcionalidade: "Sistema de navegação de telas", descricao: "Incluir sistema de navegação de telas, deve incluir dois tipos de navegação:\n- navegação por menu lateral;", modulo: "App", frente: "FRONT-END", horas: 4 },
+                { funcionalidade: "Telas para edição de dados cadastrais", descricao: "Desenvolver fluxo de telas para alteração de dados cadastrais, contendo:\n- tela de perfil (tela com botões de dados cadastrais, senha, telefone, etc)\n- tela para alteração de senha, email e celular;\n- caso haja atualização de email, solicitar senha atual do usuário para realizar a troca;\n- caso haja alteração de senha, pedir confirmação de senha atual e senha nova;\n- caso haja atualização de celular, enviar código de confirmação para whatsapp e confirmar antes de alterar", modulo: "App", frente: "FRONT-END", horas: 12 },
+                { funcionalidade: "Rotas para edição de dados cadastrais", descricao: "Desenvolver rotas possibilitando as seguintes ações para o usuário:\n- alteração de dados cadastrais;\n- alteração de email (validar senha atual do usuário);\n- alteração de celular (incluir rotas para alteração do dado e confirmação de código por whatsapp do novo número);\n- alteração de senha (validar senha atual do usuário).", modulo: "App", frente: "BACK-END", horas: 8 },
+                { funcionalidade: "Sistema de permissionamento", descricao: "O backend deve considerar que há um sistema de permissionamento com níveis de permissões diferentes a depender do usuário. Deve contemplar:\n- suporte à níveis de permissão (desenvolver de forma genérica, para caso hajam novos níveis de permissão futuramente);\n- a princípio, contemplar os seguintes níveis de permissão:\n  - Administrador\n  - Gerente (enxerga apenas os usuários que aplicaram para vagas relativas ao estabelecimento dele)\n  - Usuário (freelancer/profissional)", modulo: "App", frente: "BACK-END", horas: 18 },
+                { funcionalidade: "Tela de \"vagas livres\"", descricao: "Essa tela deve exibir para o usuário as vagas em aberto (torneiras livres), para que ele possa se candidatar ou acompanhar o processo (caso esteja inscrito). A tela deve possibilitar:\n- visualização de torneiras em aberto;\n- integração com backend;\n- configuração de filtro para listagem (por data e horário ou localidade);\n- exibição visual diferente para vagas em que o candidato já está candidatado ou não;\n- possibilitar que usuário se candidate\n- exibir regras da vaga antes do usuário confirmar a candidatura", modulo: "App", frente: "FRONT-END", horas: 12 },
+                { funcionalidade: "Tela de \"meus trabalhos\"", descricao: "Desenvolver telas das vagas em que o candidato já está concorrendo, possibilitando:\n- desistência de participação da vaga (aplicando as regras para o momento da desistência)\n- desenvolver modal de aviso para consequências da desistência, solicitando dupla confirmação do usuário para cancelar\n- integração com backend;\n- deve possibilitar informação de check-in e check-out do usuário no local do serviço.\n\nQuando usuário clicar em “queridos cheguei”, abrir câmera do celular. Não permitir subir foto da galeria.\n● Salvar imagem no banco de dados\n● Salvar horário e data no banco de dados\n● Não permitir check-in antes de 15 minutos do início da vaga\n● Quando o usuário clicar em “Fui! Arrasei!” (PRINT NO WHATSAPP), abrir câmera do celular. Não permitir subir foto da galeria.\n● Salvar imagem no banco de dados\n● Salvar horário e data no banco de dados", modulo: "App", frente: "FRONT-END", horas: 16 },
+                { funcionalidade: "Tela de \"indicação\"", descricao: "Desenvolver tela onde o usuário possa realizar uma indicação do sistema, deve contemplar:\n- envio de link de cadastro com indicação via whatsapp para o indicado;\n- formulário para preencher nome e número de celular c/ whatsapp do indicado;\n- integração com backend", modulo: "App", frente: "FRONT-END", horas: 4 },
+                { funcionalidade: "Tela de \"congelamento\"", descricao: "Tela de bloqueio a ser exibida para o usuário que está em congelamento por algum motivo", modulo: "App", frente: "FRONT-END", horas: 3 },
+                { funcionalidade: "Tela de \"pagamento\"", descricao: "Tela onde ocorrem os pagamentos mensais/semanais", modulo: "App", frente: "FRONT-END", horas: 18 },
+                { funcionalidade: "Sistema de envio de notificações", descricao: "Desenvolver sistema de envio de notificações usando SNS + FIrebase", modulo: "App", frente: "BACK-END", horas: 8 },
+                { funcionalidade: "Configuração de receb. de notificações", descricao: "Configurar app para receber notificações, incluindo:\n- criação de certificado APN's na apple e configuração do mesmo no Firebase;\n- desenvolver módulos de suporte à notificações;\n- desenvolver sistema para redirecionar automaticamente para tela ao clicar na notificação", modulo: "App", frente: "FRONT-END", horas: 8 }, // Note: APN's é para app nativo, para webapp seria Push API/FCM
+                { funcionalidade: "Sistema de indicações", descricao: "Desenvolver sistema de indicações no backend, contemplando:\n- confirmação de indicação que se cadastrou;\n- geraçõa de link de indicação e envio para número de whatsapp informado;\n- contabilizar indicações do usuário que se cadastraram no app;", modulo: "App", frente: "BACK-END", horas: 6 },
+                { funcionalidade: "Integração com PDV Eye", descricao: "Desenvolver integração com PDV EYE, contemplando:\n- criação de usuário automaticamente ao cadastrar no app;\n- configuração de webhook que registra as transações que foram atribuidos ao usuário no PDV Eye no banco de dados da aplicação (criar entidade de transações para isso -- orçado em outro item da planilha)", modulo: "Integrações", frente: "BACK-END", horas: 18 },
+                { funcionalidade: "Integração Banco Inter", descricao: "Desenvolver integração com Banco Inter para pagamento automatizado", modulo: "Integrações", frente: "BACK-END", horas: 10 },
+                { funcionalidade: "Integração do Stripe", descricao: "Integração com stripe para gerenciar assinaturas", modulo: "Integrações", frente: "BACK-END", horas: 20 },
+                { funcionalidade: "Disparo de mensagens no Whatsapp em massa", descricao: "Desenvolver funcionalidade que permite o disparo de mensagens via whatsapp em massa. Deve possibilitar:\n- sistema para disparo de mensagens em massa via whatsapp para notificação de novas vagas", modulo: "App", frente: "BACK-END", horas: 4 },
+                { funcionalidade: "Módulo para cálculo de remuneração", descricao: "Desenvolver módulo core que unifique o cálculo de remuneração no sistema com regras específicadas e baseado no tipo de remuneração (diária ou por hora)", modulo: "App", frente: "BACK-END", horas: 4 },
+                { funcionalidade: "Modulo para definição de penalidade de desistência", descricao: "Desenvolver módulo de concentra lógicas de definição de penalidade para desistência de vagas. Deve conter:\n- regra de congelamento para desistências com menos de 24h de antecedência;\n- regra de congelamento para excesso de desistências\n- desatribuir vagas do usuário no período em que ele está congelado (vagas em que se candidatou e vagas em que foi selecionado)\n- descongelar usuário automaticamente após período de congelamento", modulo: "App", frente: "BACK-END", horas: 12 },
+                { funcionalidade: "Entidade \"usuário\"", descricao: "Desenvolver entidade usuário, contemplando:\n- criação de tabela no banco de dados;\n- criação de regras de negócio do módulo;\n- criação de rotas para controller do admin;\n- criação de rotas para controller do app.", modulo: "App", frente: "BACK-END", horas: 9 },
+                { funcionalidade: "Entidade \"transação\"", descricao: "Desenvolver entidade transação (registrada via webhook do PDV Eye), contemplando:\n- criação de tabela no banco de dados;\n- criação de regras de negócio do módulo;\n- criação de rota para cadastro de webhook no PDV Eye", modulo: "App", frente: "BACK-END", horas: 8 },
+                { funcionalidade: "Entidade \"estabelecimentos\"", descricao: "Desenvolver entidade estabelecimento, contemplando:\n- criação de tabela no banco de dados;\n- criação de regras de negócio do módulo;\n- criação de rotas para controller do admin;\n- criação de rotas para controller do app;\n- atribuição de usuário gestor previamente cadastrado", modulo: "App", frente: "BACK-END", horas: 8 },
+                { funcionalidade: "Entidade \"vagas\"", descricao: "Desenvolver entidade vagas, contemplando:\n- criação de tabela no banco de dados;\n- criação de regras de negócio do módulo;\n- criação de rotas para controller do admin;\n- criação de rotas para controller do app;\n- atribuição de entidade estabelecimento;\n- persistência de histórico dos usuários que desistiram;\n- atribuição de entidade usuário à vaga;\n- criar tabelas de junção e tabelas auxiliares necessárias para atender às regra de negócio desse domínio", modulo: "App", frente: "BACK-END", horas: 16 },
+                { funcionalidade: "Entidade de \"termos\"", descricao: "Desenvolver entidade termos, contemplando:\n- criação de tabela no banco de dados;\n- criação de regras de negócio do módulo;\n- criação de rotas para controller do admin;\n- criação de rotas para controller do app;\n- possibilidade de criação tipo de termos diferentes (termos de uso e politica de privacidade);\n- manter histórico de termos anteriores;\n- gerir termo vigente e caso não tenha sido aceito pelos usuário, solicitar no login mesmo que já cadastrado (para caso de update nos termos)", modulo: "App", frente: "BACK-END", horas: 13 },
+                { funcionalidade: "Configuração de Stripe", descricao: "Criação e configuração de Conta Stripe", modulo: "Configuração", frente: "BACK-END", horas: 50 }
+            ];
+
+            const tabelaCorpo = document.querySelector("#functionalities-appendix tbody");
+            if (tabelaCorpo) { 
+                funcionalidades.forEach(item => {
+                    const row = tabelaCorpo.insertRow();
+                    row.insertCell().textContent = item.funcionalidade;
+                    const descCell = row.insertCell();
+                    descCell.innerHTML = item.descricao.replace(/\n/g, '<br>').replace(/●/g, '<li>');
+                    row.insertCell().textContent = item.modulo;
+                    row.insertCell().textContent = item.frente;
+                    const horasCell = row.insertCell();
+                    horasCell.textContent = item.horas;
+                    horasCell.style.textAlign = 'center';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
