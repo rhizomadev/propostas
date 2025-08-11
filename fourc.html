@@ -31,7 +31,7 @@
             padding: 0;
             background-color: #f9f8fe;
             color: var(--cor-texto-escuro);
-            line-height: 1.5;
+            line-height: 1.6; /* Aumentado para melhor legibilidade */
         }
         .container {
             max-width: 960px;
@@ -84,59 +84,62 @@
             font-family: 'Montserrat', sans-serif;
             color: var(--cor-principal-roxo-escuro);
             font-size: 1.4em;
-            margin-top: 20px;
-            margin-bottom: 12px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid var(--cor-secundaria-roxo);
+            margin-top: 30px; /* Aumentado para mais espaço */
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--cor-secundaria-roxo);
         }
         h4.module-title {
             font-family: 'Montserrat', sans-serif;
             color: var(--cor-secundaria-roxo);
             font-size: 1.1em;
-            margin-top: 12px;
-            margin-bottom: 4px;
+            margin-top: 15px;
+            margin-bottom: 5px;
         }
         section {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         p,
         li {
-            font-size: 0.95em;
-            margin-bottom: 8px;
+            font-size: 0.98em; /* Levemente aumentado */
+            margin-bottom: 10px;
         }
-        #why-rhizoma ul,
-        #value-proposition ul,
-        #licensing ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            font-size: 0.95em;
+        ul {
+            list-style-type: none; /* Removido estilo padrão */
+            padding-left: 0;
         }
-        #why-rhizoma li,
-        #value-proposition li,
-        #licensing li {
-            margin-bottom: 5px;
+        ul li {
+            padding-left: 25px;
+            position: relative;
+        }
+        ul li::before {
+            content: '✓'; /* Usando um ícone mais moderno */
+            position: absolute;
+            left: 0;
+            color: var(--cor-secundaria-roxo);
+            font-weight: bold;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 12px;
+            margin-top: 15px;
             box-shadow: var(--sombra-suave);
             border-radius: 8px;
-            overflow: hidden; /* Ensures border-radius is respected by children */
+            overflow: hidden;
         }
         th,
         td {
             border: 1px solid var(--cor-borda);
-            padding: 8px 10px;
+            padding: 12px 15px; /* Mais espaçamento */
             text-align: left;
-            font-size: 0.85em;
+            font-size: 0.9em;
         }
         thead tr {
             background-color: var(--cor-principal-roxo-escuro);
             color: var(--cor-texto-claro);
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.3px;
         }
         tbody tr:nth-child(even) {
             background-color: var(--cor-apoio-lavanda);
@@ -147,16 +150,16 @@
         }
         .investment-details {
             background-color: var(--cor-apoio-lavanda);
-            padding: 12px;
+            padding: 15px;
             border-radius: 8px;
             border-left: 4px solid var(--cor-secundaria-roxo);
-            margin-top: 12px;
+            margin-top: 15px;
         }
         .investment-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 6px 0;
+            padding: 8px 0;
             border-bottom: 1px dashed var(--cor-borda);
         }
         .investment-item:last-child {
@@ -171,23 +174,23 @@
             color: var(--cor-principal-roxo-escuro);
         }
         .total-project p {
-            font-size: 1.05em;
+            font-size: 1.1em;
             font-weight: bold;
         }
         .total-project .highlight-price {
             color: var(--cor-secundaria-roxo);
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
-        #recurring-costs .costs-grid {
+        .costs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 12px;
-            margin-top: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
         }
         .cost-card {
             background-color: var(--cor-texto-claro);
             border: 1px solid var(--cor-borda);
-            padding: 12px;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: var(--sombra-suave);
         }
@@ -195,75 +198,66 @@
             font-family: 'Montserrat', sans-serif;
             color: var(--cor-secundaria-roxo);
             margin-top: 0;
-            margin-bottom: 8px;
-            font-size: 1.05em;
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
         .cost-card p {
-            font-size: 0.85em;
-            margin-bottom: 5px;
-        }
-        ul.payment-terms {
-            list-style-type: disc;
-            padding-left: 18px;
-            font-size: 0.95em;
-        }
-        ul.payment-terms li {
+            font-size: 0.9em;
             margin-bottom: 5px;
         }
         .appendix-note {
             font-style: italic;
             color: var(--cor-texto-secundario);
-            margin-bottom: 12px;
-            padding: 6px;
+            margin-bottom: 15px;
+            padding: 10px;
             background-color: #f9f8fe;
-            border-left: 2px solid var(--cor-secundaria-roxo);
+            border-left: 3px solid var(--cor-secundaria-roxo);
             font-size: 0.9em;
+            border-radius: 0 5px 5px 0;
         }
         #functionalities-appendix-wrapper {
             overflow-x: auto;
-            -webkit-overflow-scrolling: touch; /* Garante rolagem suave no iOS */
+            -webkit-overflow-scrolling: touch;
         }
+        .sla-footer-note {
+            font-size: 0.9em;
+            color: var(--cor-texto-secundario);
+            margin-top: 15px;
+            text-align: center;
+        }
+        .sla-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .sla-p1 { background-color: #c0392b; }
+        .sla-p2 { background-color: #d35400; }
+        .sla-p3 { background-color: #27ae60; }
         footer {
             text-align: center;
-            margin-top: 25px;
-            padding-top: 12px;
+            margin-top: 30px;
+            padding-top: 15px;
             border-top: 1px solid var(--cor-apoio-lavanda);
-            font-size: 0.8em;
+            font-size: 0.85em;
             color: var(--cor-texto-secundario);
         }
         footer p {
-            margin: 2px 0;
+            margin: 3px 0;
         }
 
-        /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .logo {
-                margin-bottom: 15px;
-            }
-            .header-details {
-                text-align: center;
-                width: 100%;
-            }
+            .container { padding: 20px; }
+            header { flex-direction: column; align-items: center; text-align: center; }
+            .logo { margin-bottom: 15px; }
+            .header-details { text-align: center; width: 100%; }
         }
-
         @media (max-width: 480px) {
-            .container {
-                padding: 15px;
-            }
-            .logo-text h1 {
-                font-size: 2em;
-            }
-            .header-details h2 {
-                font-size: 1.4em;
-            }
+            .container { padding: 15px; }
+            .logo-text h1 { font-size: 2em; }
+            .header-details h2 { font-size: 1.4em; }
         }
     </style>
 </head>
@@ -271,14 +265,8 @@
     <div class="container">
         <header>
             <div class="logo">
-                <img
-                    src="https://19842abecef313a41bd8419d758f5c95.cdn.bubble.io/f1741049920492x827560874996382700/Sem%20T%C3%ADtulo-2-min.png"
-                    alt="Logotipo Rhizoma"
-                    id="companyLogo"
-                />
-                <div class="logo-text">
-                    <h1>Rhizoma</h1>
-                </div>
+                <img src="https://19842abecef313a41bd8419d758f5c95.cdn.bubble.io/f1741049920492x827560874996382700/Sem%20T%C3%ADtulo-2-min.png" alt="Logotipo Rhizoma" id="companyLogo" />
+                <div class="logo-text"><h1>Rhizoma</h1></div>
             </div>
             <div class="header-details">
                 <h2>Proposta Comercial</h2>
@@ -291,41 +279,76 @@
 
         <section id="introduction">
             <h3>Prezados gestores da Escola FourC,</h3>
-            <p>
-                Apresentamos esta proposta para o desenvolvimento de uma plataforma de gestão e comunicação em Bubble.io. O sistema foi concebido para ser uma ferramenta de back-office poderosa para seus administradores, automatizando a comunicação com os pais inteiramente via WhatsApp e se integrando diretamente ao seu ERP.
-            </p>
+            <p>Apresentamos esta proposta para o desenvolvimento de uma plataforma de gestão e comunicação em Bubble.io. O sistema foi concebido para ser uma ferramenta de back-office poderosa para seus administradores, automatizando a comunicação com os pais inteiramente via WhatsApp e se integrando de forma segura e eficiente ao seu ERP.</p>
         </section>
 
         <section id="executive-summary">
             <h3>Resumo da Proposta</h3>
             <ul>
                 <li><strong>Solução:</strong> Plataforma administrativa em Bubble.io com <strong>automação avançada via N8N e assistente de IA (Gemini/ChatGPT)</strong>, integrada ao ERP da escola. Toda a interação com os pais ocorre via WhatsApp.</li>
-                <li><strong>Objetivo:</strong> Simplificar a gestão de agendamentos, rematrículas e cobranças através de uma interface administrativa mínima e automações inteligentes.</li>
+                <li><strong>Objetivo:</strong> Simplificar a gestão de agendamentos, rematrículas e cobranças através de uma interface administrativa mínima e automações inteligentes, com máxima segurança e respeito à LGPD.</li>
                 <li><strong>Investimento:</strong> <span style="font-weight: bold;">R$ 22.300,00</span>.</li>
-                <li><strong>Prazo Estimado:</strong> Entre 8 e 12 semanas.</li>
+                <li><strong>Prazo Estimado:</strong> <strong style="color: var(--cor-secundaria-roxo);">8 semanas</strong>, seguindo a metodologia Scrum.</li>
             </ul>
         </section>
 
-        <section id="why-rhizoma">
-            <h3>Por Que a Rhizoma?</h3>
+        <section id="security-lgpd">
+            <h3>Segurança de Dados e Conformidade com a LGPD</h3>
+            <p>Compreendemos a criticidade dos dados dos alunos e responsáveis. Nossa arquitetura foi desenhada com a segurança como pilar central, garantindo total conformidade com a LGPD através das seguintes práticas:</p>
             <ul>
-                <li><strong>Expertise em Integrações:</strong> Temos a capacidade técnica para conectar o Bubble.io diretamente a bancos de dados SQL, garantindo que a plataforma opere com dados precisos e atualizados do seu ERP.</li>
-                <li><strong>Automação Inteligente:</strong> Desenhamos fluxos de trabalho eficientes, com a flexibilidade do N8N e a robustez do Bubble.io, para garantir que as comunicações certas cheguem às pessoas certas no momento certo.</li>
-                <li><strong>Foco no Administrador:</strong> Entendemos que a ferramenta é para a gestão. Por isso, focamos em criar um painel administrativo simples e funcional, que resolve as dores do dia a dia sem complexidade desnecessária.</li>
+                <li><strong>Acesso Controlado e Minimizado ao ERP:</strong> A integração será configurada para que a Escola FourC libere acesso de <strong>leitura</strong> apenas aos campos estritamente necessários do ERP. Para a maioria das operações, como agendamentos, o novo aplicativo armazenará apenas um identificador (como o ID do aluno), nunca dados sensíveis.</li>
+                <li><strong>Consulta em Tempo Real (Privacy by Design):</strong> Quando for preciso exibir uma informação (ex: o nome do pai em uma notificação), nosso aplicativo usará o ID para fazer uma consulta em tempo real ao ERP, buscar o dado, exibi-lo e descartá-lo, <strong>sem armazená-lo permanentemente</strong>. Essa abordagem garante a minimização de dados, pois os dados sensíveis permanecem seguros no seu ambiente.</li>
+                <li><strong>Segurança na Conexão (Bubble SQL Connector):</strong> A conexão com o banco de dados será protegida com criptografia SSL. Além disso, podemos configurar uma "whitelist de IPs", garantindo que <strong>apenas o servidor do nosso aplicativo</strong> possa fazer requisições ao seu banco de dados, bloqueando qualquer outra tentativa de acesso externo.</li>
+                <li><strong>Controle de Acesso:</strong> Apenas usuários administrativos autorizados pela Escola FourC terão acesso ao painel de gestão da nova plataforma, com login e senha individuais.</li>
             </ul>
         </section>
 
         <section id="value-proposition">
             <h3>A Plataforma: Solução e Impacto</h3>
-            <p>
-                A plataforma resolverá desafios diários da administração escolar, automatizando tarefas repetitivas e melhorando a comunicação, sem a necessidade de os pais aprenderem a usar um novo sistema. Os benefícios incluem:
-            </p>
+            <p>A plataforma resolverá desafios diários da administração escolar, automatizando tarefas repetitivas e melhorando a comunicação, sem a necessidade de os pais aprenderem a usar um novo sistema. Os benefícios incluem:</p>
             <ul>
                 <li><strong>Gestão Simplificada:</strong> Uma interface única e enxuta para os administradores configurarem todas as campanhas e regras de comunicação.</li>
                 <li><strong>Comunicação Direta no WhatsApp:</strong> 100% da interação com os pais é feita no ambiente que eles já usam, aumentando a adesão e a velocidade de resposta.</li>
                 <li><strong>Otimização das Rematrículas:</strong> Acompanhamento automatizado do status da rematrícula, com lembretes inteligentes para quem ainda não concluiu o processo.</li>
                 <li><strong>Gestão de Inadimplência:</strong> Envio automático de lembretes de cobrança baseado nos dados do ERP, melhorando o fluxo de caixa.</li>
             </ul>
+        </section>
+
+        <section id="methodology-timeline">
+            <h3>Metodologia Ágil (Scrum) e Cronograma</h3>
+            <p>Adotaremos a metodologia <strong>Scrum</strong> para garantir agilidade, transparência e entregas de valor contínuas. O projeto será dividido em <strong>4 sprints de 2 semanas cada</strong>, totalizando 8 semanas de desenvolvimento.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sprint</th>
+                        <th>Foco Principal</th>
+                        <th style="text-align:center;">Duração</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sprint 1 (Semanas 1-2)</strong></td>
+                        <td>Kick-off, Planejamento e Estrutura Base. Configuração dos ambientes e da conexão segura com o ERP.</td>
+                        <td style="text-align:center;">2 Semanas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sprint 2 (Semanas 3-4)</strong></td>
+                        <td>Desenvolvimento do MVP: Módulos de Agendamento de Reuniões e Campanha de Rematrícula.</td>
+                        <td style="text-align:center;">2 Semanas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sprint 3 (Semanas 5-6)</strong></td>
+                        <td>Implementação das Automações Avançadas (Régua de Cobrança) e Integração com IA.</td>
+                        <td style="text-align:center;">2 Semanas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sprint 4 (Semanas 7-8)</strong></td>
+                        <td>Testes Finais, Refinamentos, Treinamento e Preparação para o Go-Live.</td>
+                        <td style="text-align:center;">2 Semanas</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top:15px;">Ao final de cada sprint, faremos uma reunião de demonstração (Sprint Review) para apresentar os avanços e coletar feedback, garantindo que o projeto evolua sempre alinhado às suas expectativas.</p>
         </section>
 
         <section id="investment">
@@ -348,11 +371,11 @@
 
         <section id="payment-conditions">
             <h3>Condições de Pagamento</h3>
-             <p>Para pagamento parcelado por marcos:</p>
+            <p>Para pagamento parcelado, alinhado com as entregas do projeto:</p>
             <ul class="payment-terms">
-                <li><strong>50%</strong> Sinal (R$ 11.150,00) para início do projeto.</li>
-                <li><strong>25%</strong> (R$ 5.575,00) na entrega do MVP para homologação (módulos de agendamento e rematrícula funcionando).</li>
-                <li><strong>25%</strong> (R$ 5.575,00) na entrega final e publicação da plataforma.</li>
+                <li><strong>50% (R$ 11.150,00)</strong> na assinatura do contrato (início do Sprint 1).</li>
+                <li><strong>25% (R$ 5.575,00)</strong> na entrega e aprovação do MVP (final do Sprint 2).</li>
+                <li><strong>25% (R$ 5.575,00)</strong> na entrega final e Go-Live da plataforma (final do Sprint 4).</li>
             </ul>
              <p style="font-size:0.9em; margin-top:8px;">
                 <em>Pagamento via PIX/transferência. Custos de manutenção e serviços de terceiros (Servidores, API de WhatsApp) são separados.</em>
@@ -368,19 +391,75 @@
                     <p><strong>Servidor (N8N):</strong> ~US$ 10-20</p>
                     <p><strong>API WA (WhatsApp):</strong> ~US$ 20–50+</p>
                     <p><strong>API de IA (Gemini/ChatGPT):</strong> ~US$ 10-50+ (custo variável)</p>
-                    <p><strong>Manut. Rhizoma:</strong> R$ 990</p>
+                </div>
+                <div class="cost-card">
+                    <h4>Manutenção e Suporte Rhizoma</h4>
+                     <p><strong>Plano Mensal:</strong> R$ 990,00</p>
+                     <p style="font-size: 0.85em; margin-top: 10px;"><em>Cobre todo o suporte, monitoramento e correções descritas no plano de manutenção.</em></p>
                 </div>
             </div>
-            <p style="font-size: 0.8em; margin-top: 8px; text-align: center;">
-                <em>Custos de Servidores e APIs são estimativas pagas por vocês aos provedores. A Manutenção Rhizoma cobre suporte técnico e correções.</em>
+        </section>
+
+        <section id="maintenance-sla">
+            <h3>Manutenção e SLA Rhizoma</h3>
+            <p>Incluso no plano mensal de manutenção (R$ 990):</p>
+            <ul>
+                <li>Correções de bugs e <em>hotfixes</em> do app/N8N.</li>
+                <li>Monitoramento dos <em>workflows</em> (erros, filas e templates do WhatsApp) e pequenos ajustes operacionais (até 2h por demanda).</li>
+                <li>Atualização de textos/templates e suporte funcional aos administradores.</li>
+                <li>Backups diários do banco do app; <strong>teste de restauração</strong> trimestral.</li>
+            </ul>
+            
+            <h4 class="module-title">Canais & Horário</h4>
+            <ul>
+                <li><strong>Canais:</strong> e-mail suporte@rhizo.ma e WhatsApp (27) 99284-5455.</li>
+                <li><strong>Atendimento:</strong> dias úteis, 9h-18h (BRT). <strong>Plantão P1:</strong> 8h-20h (seg-sáb).</li>
+            </ul>
+
+            <h4 class="module-title">Prioridades e Prazos (Competitivos)</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prioridade</th>
+                        <th>Exemplos</th>
+                        <th style="text-align:center;">Tempo de Resposta</th>
+                        <th style="text-align:center;">Workaround</th>
+                        <th style="text-align:center;">Meta de Resolução</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;"><span class="sla-tag sla-p1">P1 Crítica</span></td>
+                        <td>Indisponibilidade geral; falha na régua de cobrança; erro que impede rematrículas.</td>
+                        <td style="text-align:center;">1h</td>
+                        <td style="text-align:center;">4h</td>
+                        <td style="text-align:center;">24h</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><span class="sla-tag sla-p2">P2 Alta</span></td>
+                        <td>Falha parcial; degradação relevante; bug que afeta um grupo de turmas.</td>
+                        <td style="text-align:center;">4h úteis</td>
+                        <td style="text-align:center;">1 dia útil</td>
+                        <td style="text-align:center;">3 dias úteis</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><span class="sla-tag sla-p3">P3 Normal</span></td>
+                        <td>Ajustes menores; melhorias; dúvidas.</td>
+                        <td style="text-align:center;">1 dia útil</td>
+                        <td style="text-align:center;">—</td>
+                        <td style="text-align:center;">10 dias úteis (ou cronograma)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="sla-footer-note">
+                <em>Metas de aderência: ≥ 95% dos chamados dentro do prazo. Disponibilidade do app acompanha a infraestrutura do provedor (ex.: Bubble). Para demandas fora de escopo (novas funcionalidades, integrações adicionais), estimamos e orçamos à parte.</em>
             </p>
         </section>
 
         <section id="next-steps">
             <h3>Próximos Passos</h3>
-            <p>
-                Estamos à disposição para discutir esta proposta e alinhar os detalhes para iniciarmos o desenvolvimento da sua nova ferramenta de gestão. <strong>Qual o melhor dia e horário para uma conversa na próxima semana?</strong>
-            </p>
+            <p>Acreditamos que esta proposta aborda as questões levantadas e solidifica o caminho para uma parceria de sucesso. Estamos à disposição para discutir os novos detalhes e alinhar os pontos para iniciarmos o projeto.</p>
+            <p><strong>Podemos agendar uma breve conversa na próxima semana para formalizar o aceite?</strong></p>
         </section>
 
         <section id="licensing">
